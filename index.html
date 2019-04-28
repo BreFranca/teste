@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo</title>
+</head>
+<body>
+	<h1>Captação de leads</h1>
+	<h2>Quer receber as dicas?</h2>
+	<form action="" id="form-leads">
+		<input type="text" name="name" class="name" placeholder="Nome" /><br/>
+		<input type="text" name="email" class="email" placeholder="Email" /><br/>
+		<input type="hidden" id="ip" name="ip" />
+		<button type="submit">Enviar</button>
+	</form>
+
+	<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+	<script type="application/javascript">
+        function getIP(json) {
+            document.getElementById("ip").value = json.ip;
+        }
+    </script>
+	<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+	<script src="js/jquery-3.4.0.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
